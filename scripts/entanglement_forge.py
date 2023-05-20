@@ -25,8 +25,8 @@ from entanglement_forging import Log
 from entanglement_forging import EntanglementForgedGroundStateSolver
 from entanglement_forging import EntanglementForgedConfig
 
-from scripts.circuits import hop_gate_1, hop_gate_2, ansatz_circuit
-from scripts.water_molecule import water_molecule, radii
+from circuits import hop_gate_1, hop_gate_2, ansatz_circuit
+from water_molecule import water_molecule, radii
 
 warnings.filterwarnings("ignore")
 sys.path.append("../../")
