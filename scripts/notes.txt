@@ -1,0 +1,8 @@
+Experiment_1:
+r_1, hop_gate_1, orbital_to_reduce:[0, 3]
+
+Experiment_2:
+r_1, hop_gate_2, orbital_to_reduce:[0, 4]
+
+Experiment_3:
+r_2, hop_gate_2, orbital_to_reduce:[0, 3]
