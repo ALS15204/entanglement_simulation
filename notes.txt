@@ -28,5 +28,8 @@ r_2, hop_gate_2, ansatz_1, orbital_to_reduce:[0, 3], initial_params=[0, 0, 0, 0]
 Experiment_10:
 r_2, hop_gate_2, ansatz_1, orbital_to_reduce:[0, 3], initial_params=[0, 0, 0, 0], spsa_c0 = 5 * np.pi, spsa_c1 = 0.3
 
-Experiment_10:
+Experiment_11:
 r_2, hop_gate_2, ansatz_1, orbital_to_reduce:[0, 3], initial_params=[np.pi / 4, np.pi / 2, 3 * np.pi / 4, np.pi], spsa_c0 = 10 * np.pi, spsa_c1 = 0.5
+
+Experiment_12:
+r_2, hop_gate_2, ansatz_1, orbital_to_reduce:[0, 3], initial_params=[np.pi / 4, np.pi / 2, 3 * np.pi / 4, np.pi], spsa_c0 = 3 * np.pi, spsa_c1 = 0.3
