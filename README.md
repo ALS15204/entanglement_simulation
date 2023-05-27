@@ -86,23 +86,37 @@ Follow the steps below to get set up the project
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+A demonstration of my experiment can be found in the python notebook [[water_simulation.ipnb.ipynb](notebooks%2Fwater_simulation.ipnb.ipynb)].
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+To reproduce what has been discussed in the notebook, follow the steps below:
+
+1. Run the following command to produce simulated water molecule data.
+   ```sh
+   python3.9 -m entanglement_simulation.water_molecule
+   ```
+   This will create the [[water_data.json](entanglement_simulation%2Fdata%2Fwater_data.json)]
+2. Run the following command to search the best results through hyperparameters.
+   ```sh
+   python3.9 -m entanglement_simulation.scripts.entangelement_forge
+   ```
+   This will prepare the experiment folder [reduced_orbitals_0_3_k3](experiments%2Freduced_orbitals_0_3_k3)
+3. Finally, run the following command to make plots.
+   ```sh
+   python3.9 -m entanglement_simulation.scripts.make_plots
+   ```
+   This will create the plots in the [plots](experiments%2Freduced_orbitals_0_3_k3%2Fplots) folder.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Discussion
 
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
     - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +133,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Ronin Wu - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
