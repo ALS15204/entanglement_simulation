@@ -28,17 +28,17 @@ def plot_directory(experiment_dir: Path):
     fig_3b_subplots[0].plot(water_data.radii, water_data.classical_energies, label="FCI")
     fig_3b_subplots[0].scatter(k3_data.radii, k3_data.forged_vqe_energies, label="k=3")
     fig_3b_subplots[0].scatter(k6_data.radii, k6_data.forged_vqe_energies, label="k=6")
-    fig_3b_subplots[0].set_ylabel("energy")
+    fig_3b_subplots[0].set_ylabel("energy (Ha)")
     fig_3b_subplots[0].set_xlim((0.5, 2.5))
     fig_3b_subplots[0].set_ylim((-75.75, -75.30))
     fig_3b_subplots[0].legend()
     fig_3b_subplots[1].scatter(k3_data.radii, k3_data.error_to_classical, label="k=3")
     fig_3b_subplots[1].scatter(k6_data.radii, k6_data.error_to_classical, label="k=6")
-    fig_3b_subplots[1].set_xlabel("$R_2$ (Angstroms)")
-    fig_3b_subplots[1].set_ylabel("error to classical")
+    fig_3b_subplots[1].set_xlabel("$R_2$ ($\\AA$)")
+    fig_3b_subplots[1].set_ylabel("|error| (mHa)")
     fig_3b_subplots[1].set_ylim((1., 100))
     fig_3b_subplots[1].set_yscale("log")
-    # fig_3b_subplots[1].legend()
+    fig_3b.tight_layout()
 
     fig_4b = plt.figure(1, figsize=(6, 4))
     fig_4b.suptitle(
@@ -48,17 +48,18 @@ def plot_directory(experiment_dir: Path):
     fig_4b_subplots.plot(k3_data.radii, k3_data.schmidts_1, marker="o", label="$\lambda_1$")
     fig_4b_subplots.plot(k3_data.radii, k3_data.schmidts_larger, marker="o", label="$\lambda_{>}$")
     fig_4b_subplots.plot(k3_data.radii, k3_data.schmidts_smaller, marker="o", label="$\lambda_{<}$")
-    fig_4b_subplots.set_xlabel("radius of H1")
+    fig_4b_subplots.set_xlabel("$R_2$ ($\\AA$)")
     fig_4b_subplots.set_ylabel("Schmidt coefficients")
     fig_4b_subplots.set_xlim((0.5, 2.5))
     fig_4b_subplots.set_ylim((1e-3, 2))
     fig_4b_subplots.set_yscale("log")
     fig_4b_subplots.legend()
+    fig_4b.tight_layout()
     return {"fig_3b": fig_3b, "fig_4b": fig_4b}
 
 
 if __name__ == "__main__":
-    experiment_dir = EXPERIMENT_DIR / "reduced_orbitals_0_3_k3"
+    experiment_dir = EXPERIMENT_DIR / "case_b_reduced_orbitals_0_3_k3"
     figures = plot_directory(experiment_dir)
     figures["fig_3b"].show()
     figures["fig_4b"].show()
