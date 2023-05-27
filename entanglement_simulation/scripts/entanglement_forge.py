@@ -17,7 +17,7 @@ from entanglement_simulation.circuits import hop_gate_2, ansatz_circuit_1
 from entanglement_simulation.data.constants import BITSTRINGS
 from entanglement_simulation.utils.classical_solver import CONVERTER
 from entanglement_simulation.utils.experiment_data import DataPoint, ExperimentDataSet, HyperParameters
-from entanglement_simulation.water_molecule import radii, WaterMolecule
+from entanglement_simulation.water_molecule import radii, WaterMolecule, thetas
 
 
 def reduce_bitstrings(bitstrings, orbitals_to_reduce) -> list:
@@ -35,9 +35,18 @@ def collect_exisiting_hyperparams_to_results(
 
 
 def run_one_entangled_forging_experiment(
-        ansatz: QuantumCircuit, hyperparameters: HyperParameters, reduced_bitstrings: list, target_dir: Path
+        ansatz: QuantumCircuit, hyperparameters: HyperParameters, reduced_bitstrings: list, target_dir: Path,
+        case: str = "b"
 ) -> ExperimentDataSet:
     """Runs one entangled forging experiment with one set of hyperparameters."""
+
+    if case not in ["a", "b", "c"]:
+        raise ValueError("Case must be 'a', 'b', or 'c'.")
+    if case in {"a", "b"}:
+        params = radii(50)
+    elif case == "c":
+        params = thetas(50)
+
     print(hyperparameters)
     # Check if the experiment has already been run.
     hyperparam_to_exisiting_results = collect_exisiting_hyperparams_to_results(target_dir)
@@ -46,11 +55,17 @@ def run_one_entangled_forging_experiment(
         for data_point in exisiting_result.data_points:
             print(f"Radius: {data_point.radius: .3f}; Ground State Energy: {data_point.forged_vqe_energy: .5f}")
         return exisiting_result
+
     # Run the experiment.
     experiment_data_set = ExperimentDataSet(hyperparameters=hyperparameters)
-    for radius in radii(10):
+    for p in params:
         # Prepare the water molecule.
-        water = WaterMolecule(radius_2=radius)
+        if case == "a":
+            water = WaterMolecule(radius_1=p, radius_2=p)
+        elif case == "b":
+            water = WaterMolecule(radius_2=p)
+        elif case == "c":
+            water = WaterMolecule(radius_1=p)
         water.solve_classical_result()
 
         # Run the entangled forging experiment.
@@ -70,11 +85,11 @@ def run_one_entangled_forging_experiment(
             orbitals_to_reduce=hyperparameters.orbitals_to_reduce
         )
         res = calc.solve(water.problem)
-        print(f"Radius: {radius: .3f}; Ground State Energy: {res.ground_state_energy: .5f}")
+        print(f"Radius: {p: .3f}; Ground State Energy: {res.ground_state_energy: .5f}")
 
         # Prepare data point and add it to the experiment data set.
         data_point = DataPoint(
-            radius=radius,
+            radius=p,
             hartree_fock_energy=water.hartree_fock_energy,
             classical_energy=water.classical_energy,
             forged_vqe_energy=res.ground_state_energy,
@@ -92,12 +107,13 @@ if __name__ == "__main__":
     # Experiment constants
     orbitals_to_reduce = [0, 3]
     k = 3
-    experiment_dir = EXPERIMENT_DIR / f"reduced_orbitals_{orbitals_to_reduce[0]}_{orbitals_to_reduce[1]}_k{k}"
+    case = "b"  # simulate case (b) in the paper
+    experiment_dir = EXPERIMENT_DIR / f"case_{case}_reduced_orbitals_{orbitals_to_reduce[0]}_{orbitals_to_reduce[1]}_k{k}"
     experiment_dir.mkdir(exist_ok=True, parents=True)
 
     # Hyperparameters settings
     spsa_c0s = np.arange(1, 11, 1) * np.pi  # [1, 2, ..., 10] * pi
-    spsa_c1s = np.arange(1, 6, 1) * 0.1   # [0.1, 0.2, ..., 0.5]
+    spsa_c1s = np.arange(1, 6, 1) * 0.1  # [0.1, 0.2, ..., 0.5]
     initial_thetas_sets = [[np.pi / 4, np.pi / 2, 3 * np.pi / 4, np.pi]]
 
     # Prepare hyperparameters

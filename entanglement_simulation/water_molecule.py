@@ -22,6 +22,10 @@ def radii(n_points: int = 50) -> np.ndarray:
     return np.linspace(0.5, 2.5, n_points)
 
 
+def thetas(n_points: int = 50) -> np.ndarray:
+    return np.linspace(40.0, 180.0, n_points)
+
+
 class WaterMolecule:
     def __init__(self, radius_1: float = R_1, radius_2: float = R_2, thetas_in_deg: float = THETAS_IN_DEG):
         self.radius_1 = radius_1
@@ -86,15 +90,28 @@ class WaterMolecule:
         return self.classical_result.total_energies[0]
 
 
-def create_water_data() -> ExperimentDataSet:
+def create_water_data(case="b") -> ExperimentDataSet:
+    if case not in ["a", "b", "c"]:
+        raise ValueError("Case must be 'a', 'b', or 'c'.")
     water_data = ExperimentDataSet()
-    for radius in radii(50):
-        water = WaterMolecule(radius_2=radius)
+
+    if case in {"a", "b"}:
+        params = radii(50)
+    elif case == "c":
+        params = thetas(50)
+
+    for p in params:
+        if case == "a":
+            water = WaterMolecule(radius_1=p, radius_2=p)
+        if case == "b":
+            water = WaterMolecule(radius_2=p)
+        if case == "c":
+            water = WaterMolecule(thetas_in_deg=p)
         classical_energy = water.classical_energy
         print("Classical energy = ", classical_energy)
         water_data.add_data_point(
             DataPoint(
-                radius=radius,
+                radius=p,
                 hartree_fock_energy=water.hartree_fock_energy,
                 classical_energy=classical_energy,
             )
@@ -103,5 +120,5 @@ def create_water_data() -> ExperimentDataSet:
 
 
 if __name__ == "__main__":
-    water_data = create_water_data()
+    water_data = create_water_data(case="b")
     water_data.to_json(WATER_DATA_FILE_PATH)

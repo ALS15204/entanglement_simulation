@@ -102,17 +102,17 @@ To reproduce what has been discussed in the notebook, follow the steps below:
    ```sh
    python3.9 -m entanglement_simulation.water_molecule
    ```
-   This will create the [[water_data.json](entanglement_simulation%2Fdata%2Fwater_data.json)]
+   This will create the [[water_data_case_b.json](entanglement_simulation%2Fdata%2Fwater_data_case_b.json)]
 2. Run the following command to search the best results through hyperparameters.
    ```sh
    python3.9 -m entanglement_simulation.scripts.entangelement_forge
    ```
-   This will prepare the experiment folder [reduced_orbitals_0_3_k3](experiments%2Freduced_orbitals_0_3_k3)
+   This will prepare the experiment folder [case_b_reduced_orbitals_0_3_k3](experiments%2Fcase_b_reduced_orbitals_0_3_k3)
 3. Finally, run the following command to make plots.
    ```sh
    python3.9 -m entanglement_simulation.scripts.make_plots
    ```
-   This will create the plots in the [plots](experiments%2Freduced_orbitals_0_3_k3%2Fplots) folder.
+   This will create the plots in the [plots](experiments%2Fcase_b_reduced_orbitals_0_3_k3%2Fplots) folder.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -4,4 +4,4 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).parent
 DATA_DIR = Path(__file__).parent / "data"
 EXPERIMENT_DIR = Path(__file__).parent.parent / "experiments/"
-WATER_DATA_FILE_PATH = DATA_DIR / "water_data.json"
+WATER_DATA_FILE_PATH = DATA_DIR / "water_data_case_b.json"
