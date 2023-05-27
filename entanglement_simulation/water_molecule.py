@@ -1,29 +1,25 @@
-import json
-from dataclasses import dataclass, asdict
+"""
+This module contains the WaterMolecule class, which is used to create a water molecule with a given radius and bond angle.
+This script is used to generate the file: entanglement_simulation/data/water_data.json
+"""
 import numpy as np
 from qiskit_nature.drivers import Molecule
 from qiskit_nature.drivers.second_quantization import PySCFDriver
 from qiskit_nature.problems.second_quantization import ElectronicStructureProblem
 
-from utils.classical_solver import CLASSICAL_SOLVER
+from entanglement_simulation.utils.classical_solver import CLASSICAL_SOLVER
+from entanglement_simulation.utils.experiment_data import DataPoint, ExperimentDataSet
+
+from entanglement_simulation import DATA_DIR
 
 R_1 = 0.958  # position for the first H atom
 R_2 = 0.958  # position for the second H atom
 THETAS_IN_DEG = 104.478  # bond angles.
+WATER_DATA_FILE_PATH = DATA_DIR / "water_data.json"
 
 
 def radii(n_points: int = 50) -> np.ndarray:
     return np.linspace(0.5, 2.5, n_points)
-
-
-@dataclass
-class DataPoint:
-    radius: float
-    hartree_fock_energy: float
-    classical_energy: float
-
-    def to_dict(self):
-        return asdict(self)
 
 
 class WaterMolecule:
@@ -90,19 +86,22 @@ class WaterMolecule:
         return self.classical_result.total_energies[0]
 
 
-if __name__ == "__main__":
-    water_data = []
+def create_water_data() -> ExperimentDataSet:
+    water_data = ExperimentDataSet()
     for radius in radii(50):
         water = WaterMolecule(radius_2=radius)
         classical_energy = water.classical_energy
         print("Classical energy = ", classical_energy)
-        water_data.append(
+        water_data.add_data_point(
             DataPoint(
                 radius=radius,
                 hartree_fock_energy=water.hartree_fock_energy,
                 classical_energy=classical_energy,
             )
         )
+    return water_data
 
-    with open("water_data_test.json", "w") as f:
-        json.dump([d.to_dict() for d in water_data], f, indent=4, sort_keys=True)
+
+if __name__ == "__main__":
+    water_data = create_water_data()
+    water_data.to_json(WATER_DATA_FILE_PATH)

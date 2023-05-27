@@ -1,0 +1,255 @@
+{
+  "data_points":
+  [
+    {
+      "classical_energy": -74.77915732681532,
+      "hartree_fock_energy": -74.74888248920942,
+      "radius": 0.5
+    },
+    {
+      "classical_energy": -75.02960058258465,
+      "hartree_fock_energy": -74.9979990948638,
+      "radius": 0.5408163265306123
+    },
+    {
+      "classical_energy": -75.21842619361,
+      "hartree_fock_energy": -75.185475378235,
+      "radius": 0.5816326530612245
+    },
+    {
+      "classical_energy": -75.36084401420142,
+      "hartree_fock_energy": -75.32649685887161,
+      "radius": 0.6224489795918368
+    },
+    {
+      "classical_energy": -75.4680394642833,
+      "hartree_fock_energy": -75.43222724158815,
+      "radius": 0.6632653061224489
+    },
+    {
+      "classical_energy": -75.54833104611502,
+      "hartree_fock_energy": -75.51096518613214,
+      "radius": 0.7040816326530612
+    },
+    {
+      "classical_energy": -75.60796379960155,
+      "hartree_fock_energy": -75.5689371377568,
+      "radius": 0.7448979591836735
+    },
+    {
+      "classical_energy": -75.65166289712229,
+      "hartree_fock_energy": -75.61085047158896,
+      "radius": 0.7857142857142857
+    },
+    {
+      "classical_energy": -75.68302704849128,
+      "hartree_fock_energy": -75.64028659282866,
+      "radius": 0.8265306122448979
+    },
+    {
+      "classical_energy": -75.70481317276708,
+      "hartree_fock_energy": -75.65998541054614,
+      "radius": 0.8673469387755102
+    },
+    {
+      "classical_energy": -75.7191456172941,
+      "hartree_fock_energy": -75.67205443793627,
+      "radius": 0.9081632653061225
+    },
+    {
+      "classical_energy": -75.72767158250322,
+      "hartree_fock_energy": -75.67812416358935,
+      "radius": 0.9489795918367346
+    },
+    {
+      "classical_energy": -75.73167717610258,
+      "hartree_fock_energy": -75.6794641123682,
+      "radius": 0.9897959183673469
+    },
+    {
+      "classical_energy": -75.73217412412178,
+      "hartree_fock_energy": -75.67706962204343,
+      "radius": 1.030612244897959
+    },
+    {
+      "classical_energy": -75.72996446739191,
+      "hartree_fock_energy": -75.6717266635058,
+      "radius": 1.0714285714285714
+    },
+    {
+      "classical_energy": -75.72568879767115,
+      "hartree_fock_energy": -75.66406025795376,
+      "radius": 1.1122448979591835
+    },
+    {
+      "classical_energy": -75.71986229020644,
+      "hartree_fock_energy": -75.6545707477146,
+      "radius": 1.1530612244897958
+    },
+    {
+      "classical_energy": -75.7129017588755,
+      "hartree_fock_energy": -75.64366114799364,
+      "radius": 1.193877551020408
+    },
+    {
+      "classical_energy": -75.70514612264823,
+      "hartree_fock_energy": -75.63165797006361,
+      "radius": 1.2346938775510203
+    },
+    {
+      "classical_energy": -75.69687200954228,
+      "hartree_fock_energy": -75.61882724237381,
+      "radius": 1.2755102040816326
+    },
+    {
+      "classical_energy": -75.68830572652747,
+      "hartree_fock_energy": -75.60538695399936,
+      "radius": 1.316326530612245
+    },
+    {
+      "classical_energy": -75.67963247108426,
+      "hartree_fock_energy": -75.59151678451141,
+      "radius": 1.3571428571428572
+    },
+    {
+      "classical_energy": -75.67100342330467,
+      "hartree_fock_energy": -75.57736573784464,
+      "radius": 1.3979591836734693
+    },
+    {
+      "classical_energy": -75.66254120372403,
+      "hartree_fock_energy": -75.56305813355823,
+      "radius": 1.4387755102040816
+    },
+    {
+      "classical_energy": -75.65434408244872,
+      "hartree_fock_energy": -75.54869829980694,
+      "radius": 1.4795918367346939
+    },
+    {
+      "classical_energy": -75.64648925650019,
+      "hartree_fock_energy": -75.53437423768221,
+      "radius": 1.5204081632653061
+    },
+    {
+      "classical_energy": -75.63903545918366,
+      "hartree_fock_energy": -75.52016047219468,
+      "radius": 1.5612244897959182
+    },
+    {
+      "classical_energy": -75.63202511825942,
+      "hartree_fock_energy": -75.50612026372184,
+      "radius": 1.6020408163265305
+    },
+    {
+      "classical_energy": -75.6254862342137,
+      "hartree_fock_energy": -75.49230732040499,
+      "radius": 1.6428571428571428
+    },
+    {
+      "classical_energy": -75.61943410473204,
+      "hartree_fock_energy": -75.47876712501407,
+      "radius": 1.683673469387755
+    },
+    {
+      "classical_energy": -75.61387297764266,
+      "hartree_fock_energy": -75.46553796784096,
+      "radius": 1.7244897959183672
+    },
+    {
+      "classical_energy": -75.60879767452482,
+      "hartree_fock_energy": -75.45265175932752,
+      "radius": 1.7653061224489794
+    },
+    {
+      "classical_energy": -75.60419519353513,
+      "hartree_fock_energy": -75.44013468152106,
+      "radius": 1.8061224489795917
+    },
+    {
+      "classical_energy": -75.60004627523224,
+      "hartree_fock_energy": -75.4280077252958,
+      "radius": 1.846938775510204
+    },
+    {
+      "classical_energy": -75.5963269003003,
+      "hartree_fock_energy": -75.41628714995694,
+      "radius": 1.8877551020408163
+    },
+    {
+      "classical_energy": -75.59300968286806,
+      "hartree_fock_energy": -75.40498489288512,
+      "radius": 1.9285714285714284
+    },
+    {
+      "classical_energy": -75.5900651258188,
+      "hartree_fock_energy": -75.39410894910684,
+      "radius": 1.9693877551020407
+    },
+    {
+      "classical_energy": -75.58746271282034,
+      "hartree_fock_energy": -75.38366373397172,
+      "radius": 2.010204081632653
+    },
+    {
+      "classical_energy": -75.5851718228422,
+      "hartree_fock_energy": -75.3736504365585,
+      "radius": 2.0510204081632653
+    },
+    {
+      "classical_energy": -75.5831624643668,
+      "hartree_fock_energy": -75.3640673669179,
+      "radius": 2.091836734693877
+    },
+    {
+      "classical_energy": -75.5814058365917,
+      "hartree_fock_energy": -75.35491029712371,
+      "radius": 2.13265306122449
+    },
+    {
+      "classical_energy": -75.57987473260405,
+      "hartree_fock_energy": -75.34617279379036,
+      "radius": 2.1734693877551017
+    },
+    {
+      "classical_energy": -75.57854380445536,
+      "hartree_fock_energy": -75.33784653864865,
+      "radius": 2.2142857142857144
+    },
+    {
+      "classical_energy": -75.57738971245728,
+      "hartree_fock_energy": -75.32992163338795,
+      "radius": 2.2551020408163263
+    },
+    {
+      "classical_energy": -75.57639118130906,
+      "hartree_fock_energy": -75.32238688526444,
+      "radius": 2.2959183673469385
+    },
+    {
+      "classical_energy": -75.57552898436458,
+      "hartree_fock_energy": -75.31523007049823,
+      "radius": 2.336734693877551
+    },
+    {
+      "classical_energy": -75.57478587509043,
+      "hartree_fock_energy": -75.30843817382437,
+      "radius": 2.377551020408163
+    },
+    {
+      "classical_energy": -75.57414648201443,
+      "hartree_fock_energy": -75.3019976028105,
+      "radius": 2.4183673469387754
+    },
+    {
+      "classical_energy": -75.5735971804773,
+      "hartree_fock_energy": -75.29589437746293,
+      "radius": 2.4591836734693877
+    },
+    {
+      "classical_energy": -75.5731259518025,
+      "hartree_fock_energy": -75.29011429450883,
+      "radius": 2.5
+    }
+  ]
+}

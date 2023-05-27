@@ -1,3 +1,6 @@
+"""
+This module contains the circuits used in the entanglement simulation.
+"""
 from typing import Annotated, Iterable
 
 from qiskit.circuit import Parameter, QuantumCircuit
@@ -11,6 +14,7 @@ PHIS = (
 )
 
 
+# Hop gate demonstrated in https://github.com/qiskit-community/prototype-entanglement-forging
 def hop_gate_1(theta: Parameter) -> QuantumCircuit:
     hop_gate = HOPE_GATE.copy()
     hop_gate.h(0)
@@ -23,6 +27,7 @@ def hop_gate_1(theta: Parameter) -> QuantumCircuit:
     return hop_gate
 
 
+# Hop gate defined in Figure 2B of https://arxiv.org/pdf/2104.10220.pdf
 def hop_gate_2(theta: Parameter) -> QuantumCircuit:
     hop_gate = HOPE_GATE.copy()
     hop_gate.swap(0, 1)
@@ -35,6 +40,7 @@ def hop_gate_2(theta: Parameter) -> QuantumCircuit:
     return hop_gate
 
 
+# Hop gate defined in Figure 5b of https://arxiv.org/pdf/2104.10220.pdf
 def hop_gate_3(theta: Parameter) -> QuantumCircuit:
     hop_gate = HOPE_GATE.copy()
     hop_gate.h(1)
@@ -46,6 +52,7 @@ def hop_gate_3(theta: Parameter) -> QuantumCircuit:
     return hop_gate
 
 
+# Ansatz circuit defined in Figure 2A of https://arxiv.org/pdf/2104.10220.pdf
 def ansatz_circuit_1(
     hop_gate: QuantumCircuit,
     theta: Parameter,
@@ -61,6 +68,7 @@ def ansatz_circuit_1(
     return ansatz
 
 
+# Ansatz circuit defined in Figure 5c of https://arxiv.org/pdf/2104.10220.pdf
 def ansatz_circuit_2(hop_gate_1, hop_gate_2, theta: Parameter):
     phi_1, phi_2, phi_3, phi_4 = PHIS
     ansatz = QuantumCircuit(5)
