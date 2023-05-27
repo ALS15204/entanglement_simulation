@@ -60,7 +60,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repository is prepared to reproduce the results discussed in the paper ["Doubling the size of quantum simulators by entanglement forging"](https://arxiv.org/pdf/2104.10220.pdf) Andrew Eddins et al. 
+This repository is prepared to reproduce the results discussed in the paper ["Doubling the size of quantum simulators by entanglement forging"](https://arxiv.org/pdf/2104.10220.pdf) by Andrew Eddins et al.
+
+The repository focuses on reproducing Fig 3b and 4b of the paper. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +94,7 @@ Follow the steps below to get set up the project
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-A demonstration of my experiment can be found in the python notebook [[water_simulation.ipnb.ipynb](notebooks%2Fwater_simulation.ipnb.ipynb)].
+A demonstration of my experiment can be found in the python notebook [[water_simulation_case_b.ipynb](notebooks%2Fwater_simulation_case_b.ipynb)].
 
 To reproduce what has been discussed in the notebook, follow the steps below:
 
