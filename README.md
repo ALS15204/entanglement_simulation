@@ -111,12 +111,10 @@ To reproduce what has been discussed in the notebook, follow the steps below:
 
 
 <!-- ROADMAP -->
-## Discussion
+## TODOs
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Add tests
+- [ ] Test the hyperparameters on Fig 3A and 3C (and corresponding figures in Fig 4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
