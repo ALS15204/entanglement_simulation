@@ -20,7 +20,9 @@ def plot_directory(experiment_dir: Path):
     k3_data = ExperimentDataSet.from_json(experiment_dir / "best_fit/k3.json")
     k6_data = ExperimentDataSet.from_json(experiment_dir / "best_fit/k6.json")
     fig_3b = plt.figure(0, figsize=(6, 7))
-    fig_3b.suptitle(f"c0: {k3_data.hyperparameters.spsa_c0: .3f}; c1: {k3_data.hyperparameters.spsa_c1: .3f}")
+    fig_3b.suptitle(
+        f"VQE energies [c0: {k3_data.hyperparameters.spsa_c0: .3f}; c1: {k3_data.hyperparameters.spsa_c1: .3f}]"
+    )
     fig_3b_subplots = fig_3b.subplots(nrows=2, ncols=1, sharex=True, gridspec_kw={'height_ratios': [2, 1]})
     fig_3b_subplots[0].plot(water_data.radii, water_data.hartree_fock_energies, label="HF")
     fig_3b_subplots[0].plot(water_data.radii, water_data.classical_energies, label="FCI")
@@ -39,7 +41,9 @@ def plot_directory(experiment_dir: Path):
     # fig_3b_subplots[1].legend()
 
     fig_4b = plt.figure(1, figsize=(6, 4))
-    fig_4b.suptitle("Schmidt coefficients")
+    fig_4b.suptitle(
+        f"Schmidt coefficients [c0: {k3_data.hyperparameters.spsa_c0: .3f}; c1: {k3_data.hyperparameters.spsa_c1: .3f}]"
+    )
     fig_4b_subplots = fig_4b.subplots(nrows=1, ncols=1)
     fig_4b_subplots.plot(k3_data.radii, k3_data.schmidts_1, marker="o", label="$\lambda_1$")
     fig_4b_subplots.plot(k3_data.radii, k3_data.schmidts_larger, marker="o", label="$\lambda_{>}$")
