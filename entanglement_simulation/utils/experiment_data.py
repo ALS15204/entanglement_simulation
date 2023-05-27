@@ -83,7 +83,7 @@ class ExperimentDataSet:
                     data_dict["hyperparameters"]
                 ),
             )
-            if "hyperparameters" in data_dict
+            if "hyperparameters" in data_dict and data_dict["hyperparameters"] is not None
             else cls(
                 data_points=[
                     DataPoint.from_dict(dp) for dp in data_dict["data_points"]
@@ -117,15 +117,15 @@ class ExperimentDataSet:
 
     @property
     def schmidts_1(self):
-        return [-data_point.schmidts_coefficients[0] for data_point in self.data_points]
+        return [abs(data_point.schmidts_coefficients[0]) for data_point in self.data_points]
 
     @property
     def schmidts_larger(self):
-        return [max(data_point.schmidts_coefficients[1:]) for data_point in self.data_points]
+        return [max(map(abs, data_point.schmidts_coefficients[1:])) for data_point in self.data_points]
 
     @property
     def schmidts_smaller(self):
-        return [min(data_point.schmidts_coefficients[1:]) for data_point in self.data_points]
+        return [min(map(abs, data_point.schmidts_coefficients[1:])) for data_point in self.data_points]
 
     @property
     def mean_square_error_to_classical(self):

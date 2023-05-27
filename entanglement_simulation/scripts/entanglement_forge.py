@@ -43,9 +43,9 @@ def run_one_entangled_forging_experiment(
     if case not in ["a", "b", "c"]:
         raise ValueError("Case must be 'a', 'b', or 'c'.")
     if case in {"a", "b"}:
-        params = radii(50)
+        params = radii(10)
     elif case == "c":
-        params = thetas(50)
+        params = thetas(10)
 
     print(hyperparameters)
     # Check if the experiment has already been run.
@@ -65,7 +65,7 @@ def run_one_entangled_forging_experiment(
         elif case == "b":
             water = WaterMolecule(radius_2=p)
         elif case == "c":
-            water = WaterMolecule(radius_1=p)
+            water = WaterMolecule(thetas_in_deg=p)
         water.solve_classical_result()
 
         # Run the entangled forging experiment.
