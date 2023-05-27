@@ -18,12 +18,18 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[//]: # ([![Contributors][contributors-shield]][contributors-url])
+
+[//]: # ([![Forks][forks-shield]][forks-url])
+
+[//]: # ([![Stargazers][stars-shield]][stars-url])
+
+[//]: # ([![Issues][issues-shield]][issues-url])
+
+[//]: # ([![MIT License][license-shield]][license-url])
+
+[//]: # ([![LinkedIn][linkedin-shield]][linkedin-url])
 
 
 
@@ -42,7 +48,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#todos">TODOs</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -110,7 +116,7 @@ To reproduce what has been discussed in the notebook, follow the steps below:
 
 
 
-<!-- ROADMAP -->
+<!-- TODOS -->
 ## TODOs
 
 - [ ] Add tests
@@ -131,9 +137,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Ronin Wu - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Ronin Wu - [@RoninWu](https://twitter.com/RoninWu) - roninwu@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/ALS15204/entanglement_simulation](https://github.com/ALS15204/entanglement_simulation)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
