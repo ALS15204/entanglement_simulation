@@ -80,8 +80,8 @@ To reproduce what has been discussed in the notebook, follow the steps below:
    This will create the plots in the [plots](experiments%2Fcase_b_reduced_orbitals_0_3_k3%2Fplots) folder.
 
 [NOTE] Out of curiosity, I have applied the best hyperparameters found in case b to case a and case c. The results are shown in the notebook:
-* [[simulate_case_a.ipynb](notebooks%2Fsimulate_case_a.ipynb)].
-* [[simulate_case_c.ipynb](notebooks%2Fsimulate_case_c.ipynb)].
+* [[simulate_case_a.ipynb](notebooks%2Fsimulate_case_a.ipynb)]. Case A plots: [[plots](experiments%2Fcase_a_reduced_orbitals_0_3_k3%2Fplots)].
+* [[simulate_case_c.ipynb](notebooks%2Fsimulate_case_c.ipynb)]. Case C plots: [[plots](experiments%2Fcase_c_reduced_orbitals_0_3_k3%2Fplots)].
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
