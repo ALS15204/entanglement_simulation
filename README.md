@@ -47,7 +47,11 @@ Follow the steps below to get set up the project
    ```
    source venv/bin/activate
    ```
-4. Install requirements
+4. Update setuptools pip and wheel
+   ```
+   pip install -U pip setuptools wheel
+   ```
+5. Install requirements
    ```
    pip install -e .
    ```
