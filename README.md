@@ -37,7 +37,7 @@ The repository focuses on reproducing Fig 3b and 4b of the paper.
 Follow the steps below to get set up the project
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/ALS15204/entanglement_simulation.git
    ```
 2. Set up venv wih Python 3.9
    ```
