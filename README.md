@@ -70,7 +70,7 @@ To reproduce what has been discussed in the notebook, follow the steps below:
    This will create the [[water_data_case_b.json](entanglement_simulation%2Fdata%2Fwater_data_case_b.json)]
 2. Run the following command to search the best results through hyperparameters.
    ```sh
-   python3.9 -m entanglement_simulation.scripts.entangelement_forge
+   python3.9 -m entanglement_simulation.scripts.entanglement_forge
    ```
    This will prepare the experiment folder [case_b_reduced_orbitals_0_3_k3](experiments%2Fcase_b_reduced_orbitals_0_3_k3)
 3. Finally, run the following command to make plots.
