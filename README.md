@@ -63,7 +63,7 @@ Follow the steps below to get set up the project
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-A demonstration of my experiment can be found in the python notebook [[water_simulation_case_b.ipynb](notebooks%2Fwater_simulation_case_b.ipynb)].
+A demonstration of my experiment can be found in the python notebook [[water_simulation_case_b.ipynb](notebooks%2Fwater_simulation_case_b.ipynb)]. See conclusion in the notebook for a discussion on the limitation of the experiment.
 
 To reproduce what has been discussed in the notebook, follow the steps below:
 
