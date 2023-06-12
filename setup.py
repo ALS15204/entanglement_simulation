@@ -18,7 +18,7 @@ setuptools.setup(
     author_email='roninwu@gmail.com',
     description='Simulate entanglement forging circuit for water molecule',
     long_description=long_description,
-    url='https://bitbucket.org/irisai/iris_ml/',
+    url='https://github.com/ALS15204/entanglement_simulation',
     packages=setuptools.find_packages(),
     include_package_data=True,
     zip_safe=False,
